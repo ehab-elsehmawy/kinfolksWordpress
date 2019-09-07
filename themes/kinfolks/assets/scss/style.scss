@@ -1,0 +1,208 @@
+  $version: "1.1.1";
+
+  /* ---------------------
+      IMPORT FILES
+------------------------- */
+
+  @import"variables";
+  @import"fonts";
+  @import"_mixin";
+  @import"bootstrap/bootstrap";
+
+  /* ---------------------
+      IMPORT SECTIONS FILES
+------------------------- */
+  @import"partials/navbar";
+  @import"partials/header";
+  @import"partials/team";
+  @import"partials/process";
+  @import"partials/aboutUs";
+  @import"partials/footer";
+  @import"partials/inner";
+
+  /* ------------------
+        FONTS
+--------------------- */
+
+  @font-face {
+    font-family: mainFontLight;
+    src        : url("../fonts/Gotham-Light.ttf"), url("../fonts/Gotham-Light.eot") format("embedded-opentype"), url("../fonts/Gotham-Light.woff2") format("woff2"), url("../fonts/Gotham-Light.woff") format("woff"), url("../fonts/Gotham-Light.ttf") format("truetype"), url("../fonts/Gotham-Light.svg") format("svg");
+  }
+
+  @font-face {
+    font-family: mainFontthinItalic;
+    src        : url("../fonts/Gotham-LightItalic.ttf"), url("../fonts/Gotham-LightItalic.eot") format("embedded-opentype"), url("../fonts/Gotham-LightItalic.woff2") format("woff2"), url("../fonts/Gotham-LightItalic.woff") format("woff"), url("../fonts/Gotham-LightItalic.ttf") format("truetype"), url("../fonts/Gotham-LightItalic.svg") format("svg");
+  }
+
+  @font-face {
+    font-family: mainFontExtraLight;
+    src        : url("../fonts/Gotham-ExtraLightItalic.ttf"), url("../fonts/Gotham-ExtraLightItalic.eot") format("embedded-opentype"), url("../fonts/Gotham-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Gotham-ExtraLightItalic.woff") format("woff"), url("../fonts/Gotham-ExtraLightItalic.ttf") format("truetype"), url("../fonts/Gotham-ExtraLightItalic.svg") format("svg");
+  }
+
+  @font-face {
+    font-family: mainFontBold;
+    src        : url("../fonts/Gotham-Bold.ttf"), url("../fonts/Gotham-Bold.eot") format("embedded-opentype"), url("../fonts/Gotham-Bold.woff2") format("woff2"), url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold.svg") format("svg");
+  }
+
+  @font-face {
+    font-family: mainFontRegular;
+    src        : url("../fonts/Gotham-Book.ttf"), url("../fonts/Gotham-Book.eot") format("embedded-opentype"), url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book.svg") format("svg");
+  }
+
+  /* ---------------------
+        GENERAL
+--------------------- */
+  body {
+    font-family: mainFontRegular;
+    color      : $textGray;
+
+    // &:not(.home) {
+    //   @include body-padding();
+    // }
+
+    // &:not(.logged-in) {
+    //   header {
+    //     @include body-padding();
+    //   }
+    // }
+    .green {
+      color: $green !important;
+    }
+    .container {
+      @media all and (max-width: 640px) {
+        padding: 0 20px !important;
+      }
+
+      @media all and (max-width: 992px) {
+        max-width: 90%;
+      }
+    }
+
+    .blue-text {
+      color: $green;
+    }
+
+    section,
+    footer {
+      float: left;
+      width: 100%;
+    }
+
+
+
+    section {
+      h1 {
+        text-align: center;
+        @include h1();
+      }
+
+      h5 {
+        text-align: center;
+        @include h5();
+      }
+
+      h2 {
+        @include h2();
+      }
+
+      h3 {
+        @include h3();
+      }
+
+      h4 {
+        @include h4();
+      }
+
+      h5 {
+        @include h5();
+
+        @media all and (max-width: 992px) {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-family: mainFontRegular;
+        @include p();
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    #cookie-notice {
+      font-size: 16px;
+
+      #cn-notice-text {
+        line-height: 25px;
+
+        a {
+          color: $green;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .cn-button {
+        background: $pink;
+        font-size : 14px;
+        padding   : 5px 10px;
+        border    : 0;
+      }
+
+      .cookie-notice-container {
+        padding: 25px 15px;
+      }
+    }
+
+    #wpfront-scroll-top-container {
+      z-index: 999999;
+    }
+
+    .grecaptcha-badge {
+      opacity: 0;
+    }
+
+    .sgpb-popup-dialog-main-div-wrapper {
+      .sgpb-popup-close-button-1 {
+        right                  : 0;
+        top                    : 0;
+        bottom                 : auto !important;
+        width                  : 25px;
+        height                 : 25px;
+        background-color       : #d8d8d8;
+        padding                : 7px;
+        border-top-right-radius: 5px;
+      }
+    }
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  h3 {
+    position: relative;
+    display : inline-block
+  }
+
+  h3::after {
+    content                : '';
+    position               : absolute;
+    width                  : 195px;
+    height                 : 100px;
+    border-top-left-radius : 100px;
+    border-top-right-radius: 100px;
+    left                   : 0;
+    border                 : 2px solid gray;
+    border-bottom          : 0;
+    margin-top             : 17px;
+    margin-left            : 3px;
+    transform              : rotate(180deg);
+    top                    : 95px;
+  }

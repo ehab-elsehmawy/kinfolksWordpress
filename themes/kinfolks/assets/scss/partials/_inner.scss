@@ -1,0 +1,109 @@
+body{
+    @media(max-width:992px){
+        padding-top: 70px;
+    }
+    &:not(.home){
+        font-size: 16px;
+        line-height: 30px;
+        
+        h1{
+            color: $black;
+            font-weight: bold;
+            margin-bottom: 50px;
+            position: relative;
+    
+            @media all and (max-width:1300px){
+                font-size:40px;
+                margin-bottom:20px;
+            } 
+            @media all and (max-width:870px){
+                font-size:36px;
+                margin-bottom:20px;
+            }
+            @media all and (max-width: 740px){
+                font-size:26px !important;
+            }
+            @media all and (max-width: 440px){
+                font-size: 16px !important;
+            }
+
+            // &:after{
+            //     content: '';
+            //     position: absolute;
+            //     bottom: -7px;
+            //     left: 0;
+            //     height: 5px;
+            //     width: 70px;
+            //     background-color: $green;
+            // }
+        }
+        h2{
+            @include h2();
+            color: $darkBlueText;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h3{
+            @include h3();
+            color: $darkBlueText;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+            @media all and (max-width: 640px){
+                font-size: 22px;
+            }
+        }
+        h4{
+            @include h4();
+            color: $green;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h5{
+            color: $darkBlueText;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h6{
+            color: $green;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+    
+    h1{
+        color: $black;
+        font-weight: bold;
+        margin-bottom: 50px;
+        position: relative;
+
+        @media all and (max-width:1300px){
+            font-size:40px;
+            margin-bottom:20px;
+        } 
+        @media all and (max-width:870px){
+            font-size:36px;
+            margin-bottom:20px;
+        }
+        @media all and (max-width: 740px){
+            font-size:26px !important;
+        }
+        @media all and (max-width: 440px){
+            font-size: 16px !important;
+        }
+
+        // &:after{
+        //     content: '';
+        //     position: absolute;
+        //     bottom: -7px;
+        //     left: 0;
+        //     height: 5px;
+        //     width: 70px;
+        //     background-color: $green;
+        // }
+    }
+    #main{
+        padding: 50px 0;
+        min-height: 70vh;
+    }
+}

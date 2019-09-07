@@ -1,0 +1,137 @@
+@mixin header-font() {
+    font-size  : 40px;
+    font-style : normal;
+    font-family: mainFontLight;
+    font-weight: lighter;
+
+    @media all and (min-width: 1115px) and (max-width: 1210px) {
+        font-size: 40px;
+    }
+
+    @media all and (min-width: 960px) and (max-width: 1114px) {
+        font-size: 30px;
+    }
+
+    @media all and (min-width: 768px) and (max-width: 961px) {
+        font-size: 26px;
+    }
+
+    @media all and (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+
+@mixin header-list-font() {
+    font-size: 20px;
+    font-family: mainFontLight;
+    @media all and (max-width: 992px) {
+        font-size: 16px;
+    }
+
+    @media all and (max-width: 480px) {
+        font-size: 14px;
+    }
+
+    @media all and (max-width: 375px) {
+        font-size: 12px;
+    }
+}
+
+
+@mixin footer-copyrights() {
+    font-size: 16px;
+    font-family: mainFontLight;
+    @media all and (max-width: 850px) {
+        font-size: 14px;
+    }
+
+    @media all and (max-width: 550px) {
+        font-size: 14px;
+    }
+}
+
+@mixin footer-social-icons() {
+    font-size: 26px;
+
+    @media all and (max-width: 992px) {
+        font-size: 22px;
+    }
+}
+
+@mixin h1() {
+    font-size    : 40px;
+    font-family  : mainFontBold;
+    color        : $black;
+    font-weight  : bold;
+    margin-bottom: 50px;
+    line-height  : 1.2;
+
+    @media all and (max-width: 992px) {
+        font-size    : 36px;
+        margin-bottom: 20px;
+    }
+
+    @media all and (max-width: 600px) {
+        font-size: 30px;
+    }
+
+    @media all and (max-width: 375px) {
+        font-size: 22px !important;
+    }
+}
+
+@mixin h2() {
+    font-size  : 32px;
+    font-weight: 900;
+    font-family: mainFontBold;
+    color      : $black;
+
+    @media all and (max-width: 991px) {
+        font-size: 26px;
+    }
+
+    @media all and (max-width: 370px) {
+        font-size: 20px;
+    }
+}
+
+@mixin h3() {
+    font-size  : 22px;
+    font-family: mainFontBold;
+}
+
+@mixin h4() {
+    font-size  : 24px;
+    font-family: mainFontBold;
+
+    @media all and (max-width: 500px) {
+        font-size: 18px;
+    }
+}
+
+@mixin h5() {
+    font-size  : 18px;
+    font-family: mainFontBold;
+    line-height: 25px;
+
+    @media all and (max-width: 991px) {
+        font-size: 16px;
+    }
+}
+
+@mixin h6() {
+    font-family: mainFontBold;
+    font-size  : 18px;
+}
+
+@mixin p() {
+    font-size  : 14px;
+    line-height: 25px;
+    font-family: mainFontRegular;
+}
+
+@mixin li() {
+    font-size  : 13px;
+    line-height: 25px;
+    font-family: mainFontRegular;
+}

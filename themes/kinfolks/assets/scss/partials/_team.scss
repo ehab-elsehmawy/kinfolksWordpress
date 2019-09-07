@@ -1,0 +1,209 @@
+.team-section {
+	background: $white;
+	@include section-padding();
+	position: relative;
+
+	h1,
+	h5 {
+		color     : #fff;
+		text-align: center;
+	}
+
+	h5 {
+		@include h5();
+		width : 50%;
+		margin: 10px auto 70px;
+
+		@media all and (max-width: 992px) {
+			width : 75%;
+			margin: 10px auto 40px;
+		}
+	}
+
+	.main-title-wrapper {
+		position   : absolute;
+		text-align : center;
+		transform  : rotate(95deg);
+		margin-left: -20px;
+		left       : 0;
+		top        : 10%;
+
+		&:after {
+			content      : '';
+			display      : inline-block;
+			border-radius: 50%;
+			border       : 1px solid $green;
+			width        : 220vw;
+			height       : 220px;
+			left         : 0;
+			right        : 0;
+			margin-top   : 2%;
+
+			@media(max-width: 1370px) {
+				height: 210px;
+				width : 210px;
+			}
+
+			@media(max-width: 1300px) {
+				height: 190px;
+				width : 190px;
+			}
+
+			@media(max-width: 1120px) {
+				height: 180px;
+				width : 180px;
+			}
+
+			@media(max-width:786px) {
+				height: 150px;
+				width : 150px;
+			}
+
+			@media(max-width: 490px) {
+				height: 130px;
+				width : 130px;
+			}
+		}
+
+		.SectionTitle {
+			left : 0;
+			right: 0;
+			top  : -6px;
+			@include header-font();
+
+			@media(max-width: 786px) {
+				top: 0px;
+			}
+
+			&::after {
+				content   : '';
+				background: $white;
+				display   : inline-block;
+				margin-top: -25px;
+			}
+		}
+
+
+
+		[class*="char"] {
+			background-color       : $white;
+			margin                 : -2px;
+			color                  : $green;
+			position               : relative;
+			-webkit-text-fill-color: $green;
+			box-shadow             : 12px 10px 0 $white, 18px 14px $white, 0px 0px 20px $white;
+
+		}
+	}
+
+	.team-section-blocks {
+		margin-top: 20%;
+
+		@media(max-width: 786px) {
+			margin-top: 50%;
+		}
+	}
+
+	.item {
+		text-align: center;
+
+		.img-wrapper {
+			width        : 280px;
+			height       : 280px;
+			margin       : 0 auto;
+			margin-bottom: 50px;
+
+			@media all and (max-width: 786px) {
+				width : 180px;
+				height: 180px;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.item_text {
+			padding: 0 20px;
+			@include p();
+			color      : black;
+			font-family: mainFontRegular;
+		}
+	}
+
+	.owl-nav {
+		.icon {
+			width: 40px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.owl-dots {
+		display: none !important;
+	}
+}
+
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+	// width: 50px; 
+    /* height: 70px; */
+    margin: 0;
+    /* background: #ECF0F1; */
+    border-radius: 0;
+    color: black !important;
+    cursor: pointer;
+    position: absolute;
+    bottom: 200px;
+    z-index: 999;
+	font-size: 50px !important;
+	-webkit-transition: all 0.3s;
+	-moz-transition   : all 0.3s;
+	-o-transition     : all 0.3s;
+	transition        : all 0.3s;
+	font-size: 50px !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+	background: transparent !important;
+	color     : $black;
+}
+
+.owl-nav button.owl-prev {
+	left: -40px;
+	font-size: 50px !important;
+	/* starting position */
+}
+
+.owl-nav button.owl-next {
+	right: -40px;
+	font-size: 50px !important;
+	/* starting position */
+}
+
+/* Dots */
+.owl-theme .owl-dots {
+	margin-top: 10px;
+	/* restores top margin for dots only */
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	background-color: transparent !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: transparent ;
+	/* for active dot */
+}
+
+/* Other */
+button:focus,
+button:active {
+	outline: none;
+	/* removing blue outline from buttons */
+}
